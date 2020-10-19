@@ -148,7 +148,7 @@ impl GlobalFrameInfo {
         // the function, because otherwise something is buggy along the way and
         // not accounting for all the instructions. This isn't super critical
         // though so we can omit this check in release mode.
-        debug_assert!(pos.is_some(), "failed to find instruction for {:x}", pc);
+        //debug_assert!(pos.is_some(), "failed to find instruction for {:x}", pc);
 
         let instr = match pos {
             Some(pos) => instr_map.instructions[pos].srcloc,
